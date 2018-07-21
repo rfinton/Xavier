@@ -41,7 +41,7 @@ window.onload = function() {
   $('.thin-gold-line').css('width', '0px');
 
   // Velocity animations begin here.
-  if(location.href.search(/index/) != -1) {
+  if(location.href.search(/Xavier/) != -1) {
     setTimeout(function() {
       // mobile device detection
       if(typeof(window.orientation) != 'undefined' || navigator.userAgent.search(/iemobile/i) != -1) {
