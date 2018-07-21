@@ -15,7 +15,7 @@ function isVisible($el) {
 window.onload = function() {
   try {
     if(purl) {
-      setCK(purl, '.ready.xula.edu/tattoo.html');
+      //setCK(purl, '.ready.xula.edu/tattoo.html');
     }
   } catch(e) {
     console.log(e);
