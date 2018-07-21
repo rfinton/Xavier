@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'Montserrat';
-  src: url(http://s3.amazonaws.com/enrollmentfuel/Xavier/assets/fonts/Montserrat/Montserrat-Regular.ttf);
+  src: url(https://s3.amazonaws.com/enrollmentfuel/Xavier/assets/fonts/Montserrat/Montserrat-Regular.ttf);
 
   font-family: 'Montserrat-Black';
-  src: url(http://s3.amazonaws.com/enrollmentfuel/Xavier/assets/fonts/Montserrat/Montserrat-Black.ttf);
+  src: url(https://s3.amazonaws.com/enrollmentfuel/Xavier/assets/fonts/Montserrat/Montserrat-Black.ttf);
 }
 
 body {
