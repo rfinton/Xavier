@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="256.7010192871094 278.35052490234375 222.680419921875 221.6494903564453" width="222.680419921875" height="221.6494903564453" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(0.7338700294494629, 0.7338700294494629, -0.4877780079841614, 0.4877780079841614, 379.1905212402344, 136.65635681152344)">
+    <line x1="116.495" y1="159.794" x2="116.495" y2="159.794" style="stroke: rgb(0, 168, 135); stroke-width: 3;"/>
+    <line x1="60.825" y1="179.381" x2="60.825" y2="179.381" style="stroke: rgb(0, 168, 135);"/>
+    <g transform="matrix(1, 0, 0, 1, 180, 0)">
+      <line x1="94.124" y1="0" x2="94.124" y2="499.634" style="stroke: rgb(0, 168, 135); stroke-width: 3;"/>
+      <line x1="103.124" y1="0" x2="103.124" y2="499.634" style="stroke: rgb(0, 168, 135); stroke-width: 3;"/>
+      <line x1="112.175" y1="0.162" x2="112.175" y2="499.796" style="stroke: rgb(0, 168, 135); stroke-width: 3;"/>
+    </g>
+    <line x1="265.082" y1="0.286" x2="265.082" y2="499.92" style="stroke: rgb(0, 168, 135); stroke-width: 3;"/>
+    <line x1="256.175" y1="0.193" x2="256.175" y2="499.827" style="stroke: rgb(0, 168, 135); stroke-width: 3;"/>
+    <line x1="247.052" y1="1.008" x2="247.052" y2="500.642" style="stroke: rgb(0, 168, 135); stroke-width: 3;"/>
+    <line x1="237.485" y1="1.348" x2="237.485" y2="500.982" style="stroke: rgb(0, 168, 135); stroke-width: 3;"/>
+    <line x1="228.959" y1="0.224" x2="228.959" y2="499.858" style="stroke: rgb(0, 168, 135); stroke-width: 3;"/>
+    <line x1="220.021" y1="0.131" x2="220.021" y2="499.765" style="stroke: rgb(0, 168, 135); stroke-width: 3;"/>
+    <line x1="210.588" y1="0.224" x2="210.588" y2="499.858" style="stroke: rgb(0, 168, 135); stroke-width: 3;"/>
+    <line x1="201.959" y1="0.317" x2="201.959" y2="499.951" style="stroke: rgb(0, 168, 135); stroke-width: 3;"/>
+    <line x1="192.649" y1="0.348" x2="192.649" y2="499.982" style="stroke: rgb(0, 168, 135); stroke-width: 3;"/>
+    <line x1="183.557" y1="1.008" x2="183.557" y2="500.642" style="stroke: rgb(0, 168, 135); stroke-width: 3;"/>
+    <line x1="174.526" y1="-1.085" x2="174.526" y2="498.549" style="stroke: rgb(0, 168, 135); stroke-width: 3;"/>
+    <line x1="165.464" y1="0.379" x2="165.464" y2="500.013" style="stroke: rgb(0, 168, 135); stroke-width: 3;"/>
+  </g>
+</svg>
