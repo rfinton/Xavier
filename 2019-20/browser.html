@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+<head>
+  <script>
+    function update() {
+      document.querySelector('input').value = navigator.userAgent;
+      document.forms[0].submit();
+    }
+  </script>
+</head>
+<body onload="update();">
+  <form method="post">
+    <input type="text" name="user_agent">
+  </form>
+</body>
+</html>

@@ -1,0 +1,155 @@
+$mdc-theme-primary: #ffc627;
+
+@import "@material/layout-grid/mdc-layout-grid";
+@import "@material/list/mdc-list";
+@import "@material/menu-surface/mdc-menu-surface";
+@import "@material/menu/mdc-menu";
+@import "@material/select/mdc-select";
+@import "@material/button/mdc-button";
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(https://s3.amazonaws.com/enrollmentfuel/Xavier/assets/fonts/Montserrat/Montserrat-Regular.ttf);
+
+  font-family: 'Montserrat-Black';
+  src: url(https://s3.amazonaws.com/enrollmentfuel/Xavier/assets/fonts/Montserrat/Montserrat-Black.ttf);
+}
+
+$xula-green: #00a887;
+$xula-gold: #ffc627;
+$montserrat: 'Montserrat', sans-serif;
+$montserrat-bold: 'Montserrat-Black', sans-serif;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: $montserrat;
+  font-size: 1.2rem;
+
+  .x-bold {
+    font-family: $montserrat-bold;
+  }
+
+  @media screen and (max-width: 440px) {
+    font-size: 1rem;
+  }
+
+  .container {
+    text-align: center;
+
+    .header-image {
+      img {
+        vertical-align: bottom;
+      }
+    }
+
+    .main-body {
+      box-shadow: 0px 0px 18px #555 inset;
+      padding-bottom: 20px;
+
+      .fixed-width {
+        width: 80%;
+        max-width: 1420px;
+        margin: auto;
+        padding: 30px 15px 0;
+
+        h1 {
+          margin-top: 0px;
+
+          @media screen and (max-width: 440px) {
+            font-size: 1.4rem;
+          }
+        }
+
+        .x-form {
+          max-width: 800px;
+          margin: auto;
+          border: solid 2px #000;
+          text-align: left;
+        
+          .green-border {
+            border: solid 2px $xula-green;
+        
+            form {
+              background-color: $xula-gold;
+              padding: 12px;
+              border: solid 2px #000;
+
+              .mdc-form-field {
+                margin: 6px 0 3px;
+
+                .mdc-select {
+                  height: 46px;
+                  width: 20%;
+
+                  i {
+                    bottom: 8px;
+                  }
+
+                  .mdc-select__native-control,
+                  .mdc-select__selected-text {
+                    height: 46px;
+                    padding-top: 10px;
+                    text-align: center;
+                    min-width: 80px;
+                  }
+                }
+
+                label {
+                  display: inline-block;
+                  width: calc(100% - 22%);
+                  text-align: center;
+                  border-bottom: solid 1px #555;
+                  padding-bottom: 0px;
+                  height: 46px;
+                  line-height: 46px;
+                  vertical-align: top;
+
+                  @media screen and (min-width: 781px) {
+                    font-size: 18pt;
+                  }
+                  @media screen and (max-width: 780px) {
+                    font-size: 3vw;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .actions {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          button, a {
+            margin: 12px;
+            padding: 15px 30px;
+            height: initial;
+          }
+        }
+
+        .actions.links {
+          flex-direction: row;
+
+          @media screen and (max-width: 440px) {
+            flex-direction: column;
+          }
+        }
+      }
+
+      .fixed-width.typ {
+        text-align: left;
+      }
+    }
+
+    .footer {
+      background-color: $xula-gold;
+      text-align: center;
+      padding: 30px;
+    }
+  }
+}

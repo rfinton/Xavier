@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title></title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
+  <style type="text/css">
+    @font-face {
+      font-family: 'Montserrat';
+      src: url(http://s3.amazonaws.com/enrollmentfuel/Xavier/assets/fonts/Montserrat/Montserrat-Regular.ttf);
+
+      font-family: 'Montserrat-Black';
+      src: url(http://s3.amazonaws.com/enrollmentfuel/Xavier/assets/fonts/Montserrat/Montserrat-Black.ttf);
+    }
+    #outlook a {padding:0;}
+    body{width:100% !important; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; margin:0; padding:0;}
+    .ExternalClass {width:100%;}
+    .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height: 100%;}
+    #backgroundTable {margin:0; padding:0; width:100% !important; line-height: 100% !important;}
+    img {outline:none; text-decoration:none; -ms-interpolation-mode: bicubic;}
+    a img {border:none;}
+    h1, h2, h3, h4, h5, h6 {color: black !important;}
+    h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: blue !important;}
+    h1 a:active, h2 a:active,  h3 a:active, h4 a:active, h5 a:active, h6 a:active {color: red !important;}
+    h1 a:visited, h2 a:visited,  h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited {color: purple !important;}
+    table td {border-collapse:collapse;font-family:'Montserrat',Helvetica,sans-serif;font-size:12pt;line-height:14pt;color:#23201C;border-bottom:0;padding:0;}
+    table { border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; }
+    a {color: blue;}
+    .no-contextual-highlighting span { /* prevent outlook web version from converting addresses into links */
+      border-bottom:none !important; color:inherit !important;
+    }
+
+    /*MOBILE TARGETING*/
+    /* NOTE: To properly use @media queries and play nice with yahoo mail, use attribute selectors in place of class, id declarations.
+    table[class=classname]*/
+    @media only screen and (max-device-width: 480px) {
+        /* A nice and clean way to target phone numbers you want clickable and avoid a mobile phone from linking other numbers that look like, but are not phone numbers.  Use these two blocks of code to "unstyle" any numbers that may be linked.  The second block gives you a class to apply with a span tag to the numbers you would like linked and styled. */
+        a[href^="tel"], a[href^="sms"] {
+            text-decoration: none;
+            color: black;
+            pointer-events: none;
+            cursor: default;
+        }
+        .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+            text-decoration: default;
+            color: orange !important;
+            pointer-events: auto;
+            cursor: default;
+        }
+    }
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+        /* You guessed it, ipad (tablets, smaller screens, etc) */
+        /* Step 1a: Repeating for the iPad */
+        a[href^="tel"], a[href^="sms"] {
+            text-decoration: none;
+            color: blue;
+            pointer-events: none;
+            cursor: default;
+        }
+        .mobile_link a[href^="tel"], .mobile_link a[href^="sms"] {
+            text-decoration: default;
+            color: orange !important;
+            pointer-events: auto;
+            cursor: default;
+        }
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+        /* Put your iPhone 4g styles in here */
+    }
+    /*Android targeting*/
+    @media only screen and (-webkit-device-pixel-ratio:.75){
+        /* Put CSS for low density (ldpi) Android layouts in here */
+    }
+    @media only screen and (-webkit-device-pixel-ratio:1){
+        /* Put CSS for medium density (mdpi) Android layouts in here */
+    }
+    @media only screen and (-webkit-device-pixel-ratio:1.5){
+        /* Put CSS for high density (hdpi) Android layouts in here */
+    }
+    /* end Android targeting */
+  </style>
+
+  <!-- Targeting Windows Mobile -->
+  <!--[if IEMobile 7]>
+      <style type="text/css"></style>
+  <![endif]-->
+
+  <!-- ***** END MOBILE TARGETING ***** -->
+
+  <!--[if gte mso 9]>
+      <style>
+      /* Target Outlook 2007 and 2010 */
+		table td p {font-family:Helvetica,sans-serif !important; line-height:24px !important;}
+		table td #unsubscribe {font-family:Helvetica,sans-serif !important; line-height:8pt !important;}
+      </style>
+  <![endif]-->
+</head>
+  <body>
+    <!--[if mso]>
+      <table><tr><td width="610">
+    <![endif]-->
+    <!--[if gte mso 15]>
+      <style>
+        body, table, td {font-family:Helvetica,sans-serif !important;line-height:130% !important;mso-line-height-rule:exactly;}
+      </style>
+    <![endif]-->
+    <div class="container" style="padding:0 8px;">
+      <table id="outlook" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:solid 5px #ffffff;">
+        <tr>
+          <td width="610" align="left" style="padding:0;text-align:left;">
+            <img width="610" style="width:100%;max-width:610px;" src="http://s3.amazonaws.com/enrollmentfuel/Xavier/assets/images/n1.jpg" alt="xula-image"/>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" class="no-contextual-highlighting" style="padding:10px 0;font-size:12pt;font-size-adjust:none;line-height:1.7;">
+          	<p><span><strong>Dear ##firstname##,</strong></span></p>
+            
+            <p style="width:100%;max-width:610px;"><span>Thank you for your interest in <strong><a href="http://www.xula.edu?purl=##purl##">Xavier University of Louisiana</a></strong>&mdash;a school of <strong><a href="http://www.xula.edu/mediarelations/quickfacts.html?purl=##purl##">national distinction</a></strong>. Known in New Orleans as the Emerald City because of our green roof tops, you will be part of a unique <strong><a href="http://www.xula.edu/student-life/index.html?purl=##purl##">student life</a></strong> experience. Come as you are, and <strong>LEAVE READY</strong>&mdash;for wherever your passions take you. <strong><a href="http://www.xula.edu/admissions/applicationinfo.html?purl=##purl##">Apply now</a></strong>.</span></p>
+
+            <p style="width:100%;max-width:610px;padding:0;margin:0;">
+          		<span>Hope to see you soon,</span>
+          	</p>
+            <img width="130" style="width:40%;max-width:130px;margin:0;" src="http://s3.amazonaws.com/enrollmentfuel/Xavier/assets/images/mscott.png" alt="Monica Scott"/>
+          	<p style="width:100%;max-width:610px;padding:0;margin:0;">
+       			<span>Monica C. Scott<br/>Director of Admissions<br/><br/></span>
+          	</p>
+          </td>
+        </tr>
+        
+        <tr>
+          <td valign="top" align="left" class="no-contextual-highlighting" style="padding-top:25px;">
+            <p style="width:100%;max-width:610px;border-top:solid 15px #dadbdc;border-bottom:solid 15px #dadbdc;text-align:center;background:#dadbdc">1 Drexel Drive | New Orleans, LA 70125 | 504.520.7411 | <a href="http://www.xula.edu?purl=##purl##">xula.edu</a></p>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" align="left" class="no-contextual-highlighting" style="padding:15px 0;">
+            <p id="unsubscribe" style="width:100%;max-width:610px;text-align:center;font-size:8pt;font-size-adjust:none;line-height:8pt;">This message is intended for ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please <a href="http://www.##purl##.ready.xula.edu/unsubscribe.html">UNSUBSCRIBE</a>.</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  <!--[if mso]>
+    </td></tr></table>
+  <![endif]-->
+  </body>
+</html>

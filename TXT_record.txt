@@ -1,0 +1,4 @@
+TXT Record for ready.xula.edu
+
+Host: _pki-validation.ready
+Value: C630-5F53-9228-C87F-14AA-0818-8806-8A81

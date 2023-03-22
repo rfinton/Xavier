@@ -1,0 +1,18 @@
+/*=======================================================================
+By inserting the below code into the <head> section of your website, 
+enrollmentFUEL can create clickCAPTURE reports for your
+marketing campaign. It simply reports to our system, the URL of a visitor 
+that previously engaged with our campaign.
+
+If you use Google Tag Manager on your website, we would prefer you
+to create a GTM container and give marketing.enrollmentfuel@gmail.com
+edit permissions. This enables us to add the script and make future
+modifications if necessary. Otherwise, you will need to insert the code
+via a CMS or manually adding it to each page of your website under
+the domain.
+=======================================================================*/
+
+<!-- Enrollment FUEL clickCAPTURE : BEGIN -->
+<script src="https://s3.amazonaws.com/enrollmentfuel/lib/track-v1.3.js"></script>
+<script>$(function(){runThis('MFI', 'ready.xula.edu', 'xula.edu');});</script>
+<!-- Enrollment FUEL clickCAPTURE : END -->

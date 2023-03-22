@@ -1,0 +1,1745 @@
+<Program Name="Intentions (March 2019)" Version="1.0" DbId="0" CheckOutId="0" State="Start" Permissions="">
+  <Campaign Name="survey" Version="1.0" Id="1" DbId="0" CheckOutId="0" State="Start" Permissions="">
+    <CampaignElements>
+      <CampaignElement Id="1" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Email 1" Position="120,160" SharedCheckout="False" Permissions="">
+        <Events>
+          <Event EventId="20103" GoalId="1" IsDistinct="True" />
+          <Event EventId="20104" GoalId="2" IsDistinct="True" />
+        </Events>
+        <Properties>
+          <Messages>
+            <Message Id="1">
+              <ToAddress>##email##</ToAddress>
+              <FromName>Jazmane N. Brown</FromName>
+              <FromAddress>jbrown77@xula.edu</FromAddress>
+              <ReplyTo>admissions@xula.edu</ReplyTo>
+              <Subject>##firstname##, Help Us Help You! ##emailsubjectlineaddendum##</Subject>
+              <HtmlContent>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"&gt;
+&lt;head&gt;
+
+&lt;meta charset="utf-8"&gt; &lt;!-- utf-8 works for most cases --&gt;
+&lt;meta name="viewport" content="width=device-width"&gt; &lt;!-- Forcing initial-scale shouldn't be necessary --&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt; &lt;!-- Use the latest (edge) version of IE rendering engine --&gt;
+&lt;meta name="x-apple-disable-message-reformatting"&gt;  &lt;!-- Disable auto-scale in iOS 10 Mail entirely --&gt;
+&lt;title&gt;&lt;/title&gt; &lt;!-- The title tag shows in email notifications, like Android 4.4. --&gt;
+
+&lt;!-- Web Font / @font-face : BEGIN --&gt;
+&lt;!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. --&gt;
+
+&lt;!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. --&gt;
+&lt;!--[if mso]&gt;
+&lt;style&gt;
+  * { font-family: Helvetica, sans-serif !important; }
+&lt;/style&gt;
+&lt;![endif]--&gt;
+
+&lt;!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ --&gt;
+
+&lt;!--[if !mso]&gt;&lt;!--&gt;
+&lt;!-- insert web font reference, eg: &lt;link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'&gt; --&gt;
+&lt;!--&lt;![endif]--&gt;
+
+&lt;!-- Web Font / @font-face : END --&gt;
+
+&lt;!-- CSS Reset : BEGIN --&gt;
+&lt;style&gt;
+  /* What it does: Remove spaces around the email design added by some email clients. */
+  /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+  html,
+  body {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  /* What it does: Stops email clients resizing small text. */
+  * {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* What it does: Centers email on Android 4.4 */
+  div[style*="margin: 16px 0"] {
+    margin: 0 !important;
+  }
+
+  /* What it does: Stops Outlook from adding extra spacing to tables. */
+  table,
+  td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+  }
+
+  /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+  table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    margin: 0 auto !important;
+  }
+  table table table {
+    table-layout: auto;
+  }
+
+  /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+  a {
+    text-decoration: none;
+  }
+
+  /* What it does: Uses a better rendering method when resizing images in IE. */
+  img {
+    -ms-interpolation-mode:bicubic;
+  }
+
+  /* What it does: A work-around for email clients meddling in triggered links. */
+  *[x-apple-data-detectors],  /* iOS */
+  .unstyle-auto-detected-links *,
+  .aBn {
+    border-bottom: 0 !important;
+    cursor: default !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+  }
+
+  /* What it does: Prevents Gmail from changing the text color in conversation threads. */
+  .im {
+    color: inherit !important;
+  }
+
+  /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+  .a6S {
+    display: none !important;
+    opacity: 0.01 !important;
+  }
+  
+  /* If the above doesn't work, add a .g-img class to any image in question. */
+  img.g-img + div {
+      display: none !important;
+  }
+
+  /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+  /* Create one of these media queries for each additional viewport size you'd like to fix */
+
+  /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+  @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+    u ~ div .email-container {
+      min-width: 320px !important;
+    }
+  }
+
+  /* iPhone 6, 6S, 7, 8, and X */
+  @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    u ~ div .email-container {
+      min-width: 375px !important;
+    }
+  }
+
+  /* iPhone 6+, 7+, and 8+ */
+  @media only screen and (min-device-width: 414px) {
+    u ~ div .email-container {
+      min-width: 414px !important;
+    }
+  }
+&lt;/style&gt;
+&lt;!-- CSS Reset : END --&gt;
+&lt;!-- Reset list spacing because Outlook ignores much of our inline CSS. --&gt;
+&lt;!--[if mso]&gt;
+&lt;style type="text/css"&gt;
+  ul,
+  ol {
+    margin: 0 !important;
+  }
+  li {
+    margin-left: 30px !important;
+  }
+  li.list-item-first {
+    margin-top: 0 !important;
+  }
+  li.list-item-last {
+    margin-bottom: 10px !important;
+  }
+&lt;/style&gt;
+&lt;![endif]--&gt;
+
+&lt;!-- Progressive Enhancements : BEGIN --&gt;
+&lt;style&gt;
+  /* What it does: Hover styles for buttons */
+  .button-td,
+  .button-a {
+    transition: all 100ms ease-in;
+  }
+
+  .button-td-primary:hover,
+  .button-a-primary:hover {
+    background: #555555 !important;
+    border-color: #555555 !important;
+  }
+
+  /* Media Queries */
+  @media screen and (max-width: 600px) {
+    .email-container {
+      width: 100% !important;
+      margin: auto !important;
+    }
+
+    /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+    .fluid {
+      max-width: 100% !important;
+      height: auto !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* What it does: Forces table cells into full-width rows. */
+    .stack-column,
+    .stack-column-center {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      direction: ltr !important;
+    }
+    
+    /* And center justify these ones. */
+    .stack-column-center {
+      text-align: center !important;
+    }
+
+    /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+    .center-on-narrow {
+      text-align: center !important;
+      display: block !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      float: none !important;
+    }
+
+    table.center-on-narrow {
+      display: inline-block !important;
+    }
+
+    /* What it does: Adjust typography on small screens to improve readability */
+    .email-container p {
+      font-size: 17px !important;
+    }
+  }
+&lt;/style&gt;
+&lt;!-- Progressive Enhancements : END --&gt;
+
+&lt;!-- What it does: Makes background images in 72ppi Outlook render at correct size. --&gt;
+&lt;!--[if gte mso 9]&gt;
+&lt;xml&gt;
+  &lt;o:OfficeDocumentSettings&gt;
+    &lt;o:AllowPNG/&gt;
+    &lt;o:PixelsPerInch&gt;96&lt;/o:PixelsPerInch&gt;
+  &lt;/o:OfficeDocumentSettings&gt;
+&lt;/xml&gt;
+&lt;![endif]--&gt;
+
+&lt;/head&gt;
+&lt;!--
+	The email background color (#222222) is defined in three places:
+	1. body tag: for most email clients
+	2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+	3. mso conditional: For Windows 10 Mail
+--&gt;
+&lt;body style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly;"&gt;
+  &lt;!-- Visually Hidden Preheader Text : BEGIN --&gt;
+  &lt;div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;"&gt;
+    We're excited to welcome you to Xavier University of Louisiana!
+  &lt;/div&gt;
+  &lt;!-- Visually Hidden Preheader Text : END --&gt;
+
+  &lt;!-- Honeypot : BEGIN --&gt;
+  &lt;a href="http://##PURL##.deposit-xula.m.mdl.io/honeypot.html" style="display: none !important; color: transparent; font-size: 1px; line-height:1px; max-height: 0px; opacity: 0; overflow: hidden; mso-hide: all;" rel="nofollow"&gt;&amp;nbsp;&lt;/a&gt;
+  &lt;!-- Honeypot : END --&gt;
+
+	&lt;center style="background: #cccccc;"&gt;
+    &lt;!--[if mso | IE]&gt;
+    &lt;table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"&gt;
+      &lt;tr&gt;
+        &lt;td align="center" valign="middle" style="background: #cccccc;"&gt;
+    &lt;![endif]--&gt;
+    
+    &lt;!-- Email Body : BEGIN --&gt;
+    &lt;table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" class="email-container" style="border-top: solid 10px #cccccc;"&gt;
+
+      &lt;!-- 1 Column Text + Button : BEGIN --&gt;
+      &lt;tr&gt;
+        &lt;td style="margin: 0; padding: 0; background: #ffffff;"&gt;
+          &lt;table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0 auto; padding: 0;"&gt;
+            &lt;tr&gt;
+              &lt;td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;"&gt;
+                &lt;p style="margin: 0 0 10px;"&gt;##firstname##,&lt;br&gt;&lt;br&gt;We're excited to welcome you to Xavier University of Louisiana! We want to help you as you make your college decision&amp;mdash;even if that decision isn't to choose us.&lt;br&gt;&lt;br&gt;Click &lt;a style="text-decoration:underline;" href="http://##PURL##.deposit-xula.m.mdl.io/?l=survey&amp;e=1"&gt;here&lt;/a&gt; to share what's on your mind, or use this direct link:&lt;/p&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td style="padding: 0 20px 20px;"&gt;
+                &lt;!-- Button : BEGIN --&gt;
+                &lt;table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:auto;"&gt;
+                  &lt;tr&gt;
+                    &lt;td class="button-td button-td-primary" style="border-radius: 4px; background: #00A885;"&gt;
+                      &lt;a class="button-a button-a-primary" href="http://##PURL##.deposit-xula.m.mdl.io/?l=deposit&amp;e=1" style="background: #00A885; border: 1px solid #00A885; font-family: sans-serif; font-size: 15px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 4px;"&gt;confirm.xula.edu&lt;/a&gt;
+                    &lt;/td&gt;
+                  &lt;/tr&gt;
+                &lt;/table&gt;
+                &lt;!-- Button : END --&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/table&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;!-- 1 Column Text + Button : END --&gt;
+
+	    &lt;!-- 1 Column Text : BEGIN --&gt;
+	    &lt;tr&gt;
+	      &lt;td style="background-color: #ffffff;"&gt;
+	        &lt;table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"&gt;
+	          &lt;tr&gt;
+              &lt;td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;"&gt;
+                &lt;p style="margin: 0 0 10px;"&gt;
+                Sincerely,&lt;br&gt;
+                Jazmane N. Brown&lt;br&gt;
+                Assistant Vice President for Enrollment Management&lt;/p&gt;
+	            &lt;/td&gt;
+	          &lt;/tr&gt;
+	        &lt;/table&gt;
+	      &lt;/td&gt;
+	    &lt;/tr&gt;
+	    &lt;!-- 1 Column Text : END --&gt;
+	  &lt;/table&gt;
+	  &lt;!-- Email Body : END --&gt;
+
+    &lt;!-- Email Footer : BEGIN --&gt;
+    &lt;table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="border-bottom: solid 10px #cccccc;margin: 0 auto; background:#ffc530;" class="email-container"&gt;
+      &lt;tr&gt;
+        &lt;td style="padding: 20px; font-family: sans-serif; font-size: 12px; line-height: 15px; text-align: center; color: #222222;"&gt;
+          Xavier University of Louisiana&lt;br&gt;
+          &lt;span class="unstyle-auto-detected-links"&gt;1 Drexel Drive, New Orleans, LA&lt;br&gt;(504) 520-7388&lt;/span&gt;
+          &lt;br&gt;&lt;br&gt;
+          This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please &lt;a href="##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##" style="color: #888888; text-decoration: underline;"&gt;unsubscribe&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+    
+    &lt;!-- Email Footer : END --&gt;
+
+    &lt;!--[if mso | IE]&gt;
+    &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;![endif]--&gt;
+  &lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;</HtmlContent>
+              <TextContent>##firstname##,
+
+We're excited to welcome you to Xavier University of Louisiana! We want to help you as you make your college decision—even if that decision isn't to choose us.
+
+Click here to share what's on your mind, or use this direct link:
+ 
+confirm.xula.edu
+
+Sincerely,
+Jazmane N. Brown
+Assistant Vice President for Enrollment Management
+ 
+Xavier University of Louisiana
+1 Drexel Drive, New Orleans, LA
+(504) 520-7388 
+
+This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please unsubscribe  </TextContent>
+            </Message>
+          </Messages>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="2" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Microsite" Category="Inbound" Name="Microsite" Position="120,290" SharedCheckout="False" Permissions="">
+        <Schedules>
+          <Schedule DbId="0" Id="1" Status="Scheduled" Type="Fixed" TimeZone="Central Standard Time" EmailNotification="" ApprovalRequired="True">
+            <Subject>Microsite (Right Now)</Subject>
+            <Body />
+            <Start DateTime="03/04/2019 11:23:05 PM" />
+            <End DateTime="03/04/2022 11:23:05 PM" />
+          </Schedule>
+        </Schedules>
+        <Events />
+        <CallbackTouchPoints>
+          <CallbackTouchPoint Id="1" DbId="0" Callback="http://deposit-xula.m.mdl.io" />
+        </CallbackTouchPoints>
+        <ChildElements>
+          <ChildElement Id="1" DbId="0" Type="Page" IsVersion="False" Name="deposit.html" Position="190,300">
+            <Properties PageType="Page" IsHomePage="False" SkipPage="False" IsLoginRequired="False">
+              <HtmlContent>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta http-equiv="refresh" content="0;URL='http://confirm.xula.edu'"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;</HtmlContent>
+            </Properties>
+            <Flow />
+            <Events />
+          </ChildElement>
+          <ChildElement Id="2" DbId="0" Type="Page" IsVersion="False" Name="request.html" Position="70,20">
+            <Properties PageType="Page" IsHomePage="True" SkipPage="True" IsLoginRequired="False">
+              <HtmlContent />
+            </Properties>
+            <Flow>
+              <FlowNextElement Id="6" Name="redirect.html">
+                <Filter CriteriaJoinOperator="&amp;" />
+              </FlowNextElement>
+            </Flow>
+            <Events />
+          </ChildElement>
+          <ChildElement Id="3" DbId="0" Type="Page" IsVersion="False" Name="survey.html" Position="70,300">
+            <Properties PageType="Page" IsHomePage="False" SkipPage="False" IsLoginRequired="False">
+              <HtmlContent>&lt;!doctype html&gt;
+&lt;html class="no-js" lang=""&gt;
+
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;&lt;/title&gt;
+  &lt;meta name="description" content=""&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+  &lt;link rel="manifest" href="https://s3.amazonaws.com/xavier.ef/intentions/site.webmanifest"&gt;
+  &lt;link rel="apple-touch-icon" href="https://s3.amazonaws.com/xavier.ef/intentions/icon.png"&gt;
+  &lt;!-- Place favicon.ico in the root directory --&gt;
+
+  &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"&gt;
+  &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.12.4.js"&gt;&lt;/script&gt;
+  &lt;script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"&gt;&lt;/script&gt;
+  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"&gt;&lt;/script&gt;
+  &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"&gt;&lt;/script&gt;
+  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"&gt;&lt;/script&gt;
+  &lt;link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"&gt;
+
+  &lt;link rel="stylesheet" href="https://s3.amazonaws.com/xavier.ef/intentions/css/normalize.css"&gt;
+  &lt;link rel="stylesheet" href="https://s3.amazonaws.com/xavier.ef/intentions/css/main.css"&gt;
+  
+  &lt;meta name="theme-color" content="#fafafa"&gt;
+
+  &lt;script&gt;
+    $(document).ready(function() {
+      $('#datepicker').datepicker(); //enable datepicker
+
+      function checkQuestion4() {
+        var q4 = $("#label-4 input[type=checkbox]").prop('checked');
+        var oc = $("#other-college").val();
+        
+        if(q4 &amp;&amp; !oc) {
+          $('#other-college').popover('show');
+          $('#other-college').focus();
+          $('#other-college').blur(function() {
+            $('#other-college').popover('hide');
+          });
+
+          return false;
+        }
+      }
+
+      $('#xform').on('submit', function(event) {
+        if(checkQuestion4() == false) {
+          return false;
+        }
+
+        var form_ready = $('input[name=will_mail_by]').val() || $('input[name=deposit_sent]').prop('checked') || $('input[name=still_considering]').prop('checked') || $('input[name=other_college]').val();
+
+        if(!form_ready) {
+          alert("Let us know your deposit status by checking the appropriate boxes. Thanks!");
+          return false;  
+        }
+        
+        return true;
+      });
+
+      $('#label-1').click(function() {
+        $('#label-2 input[type=checkbox]').prop('checked', false);
+        $('#label-4 input[type=checkbox]').prop('checked', false);
+        $('#other-college').val('');
+
+        if($('#datepicker').val() == "") {
+          $('#datepicker').datepicker('show');
+          $('#datepicker').focus();
+        }
+        else {
+          $('#datepicker').val('');
+        }
+      });
+
+      $('#datepicker').blur(function() {
+        if($('#datepicker').val() == "") {
+          $('#label-1 input[type=checkbox]').prop('checked', false);
+        }
+      });
+
+      $('#datepicker').change(function() {
+        if($('#datepicker').val() == "") {
+          $('#label-1 input[type=checkbox]').prop('checked', false);
+        }
+        else {
+          $('#label-1 input[type=checkbox]').prop('checked', true);
+        }
+      });
+
+      $('#label-2').click(function() {
+        $('#label-1 input[type=checkbox]').prop('checked', false);
+        $('#datepicker').val('');
+        $('#label-4 input[type=checkbox]').prop('checked', false);
+        $('#other-college').val('');
+      });
+
+      $('#label-3 input[type=checkbox]').change(function() {
+        $('#label-4 input[type=checkbox]').prop('checked', false);
+      });
+
+      $('.hinders input[type=checkbox]').change(function() {
+        $('#label-4 input[type=checkbox]').prop('checked', false);
+        var c = false;
+        $.each($('input[name=hinders]'), function() {
+          if(this.checked &amp;&amp; !c) {
+            c = true;
+          }
+        });
+        $('input[name=still_considering]').prop('checked', c);
+      });
+
+      $('#label-4').click(function() {
+        $('#label-1 input[type=checkbox]').prop('checked', false);
+        $('#datepicker').val('');
+        $('#label-2 input[type=checkbox]').prop('checked', false);
+        $('#label-3 input[type=checkbox]').prop('checked', false);
+        $('input[name=hinders]').prop('checked', false);
+        $('#other-college').focus();
+      });
+    });
+  &lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;!--[if lte IE 9]&gt;
+    &lt;p class="browserupgrade"&gt;You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser. Please &lt;a href="https://browsehappy.com/"&gt;upgrade your browser&lt;/a&gt; to improve your experience and security.&lt;/p&gt;
+  &lt;![endif]--&gt;
+
+  &lt;div class="container-fluid pg-1"&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="top-border"&gt;&lt;/div&gt;
+
+      &lt;div class="col-xs-0 col-md-4"&gt;&lt;/div&gt;
+
+      &lt;div class="col-xs-12 col-md-8" style="background-color:#ffffff;"&gt;
+        &lt;div class="banner"&gt;
+          &lt;img width="260" height="260" src="http://s3.amazonaws.com/xavier.ef/assets/images/xavier-seal.svg"&gt;
+        &lt;/div&gt;
+
+        &lt;h4&gt;Let us know where you are in the process so we can help! Simply fill out the form below or visit &lt;a target="_blank" href="http://confirm.xula.edu"&gt;http://confirm.xula.edu&lt;/a&gt; to update your status.&lt;/h4&gt;
+
+        &lt;form method="post" id="xform"&gt;
+          &lt;div id="form-group-1"&gt;
+            &lt;label id="label-1" class="da-container"&gt;Woohoo&amp;mdash;I am depositing soon. I will mail my deposit by:
+              &lt;input type="checkbox"&gt;
+              &lt;span class="checkmark"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;div class="input-group mb-3"&gt;
+              &lt;div class="input-group-prepend"&gt;
+                &lt;span class="input-group-text"&gt;&lt;i class="fas fa-calendar-alt"&gt;&lt;/i&gt;&lt;/span&gt;
+              &lt;/div&gt;
+              &lt;input type="text" id="datepicker" name="will_mail_by" class="form-control" value="##will_mail_by##"&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div id="form-group-2"&gt;
+            &lt;label id="label-2" class="da-container"&gt;My deposit is already in the mail!
+              &lt;input type="checkbox" name="deposit_sent" value="True"&gt;
+              &lt;span class="checkmark"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+          &lt;/div&gt;
+
+          &lt;div id="form-group-3"&gt;
+            &lt;label id="label-3" class="da-container"&gt;I am still considering Xavier University of Louisiana.&lt;br&gt;But, before I send my deposit, can you help me with (select all that apply):
+              &lt;input type="checkbox" name="still_considering" value="True"&gt;
+              &lt;span class="checkmark"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            
+            &lt;div class="hinders row"&gt;
+              &lt;div class="col-1"&gt;
+                &lt;input type="checkbox" id="hinder-1" name="hinders" value="Info about area of study"&gt;
+              &lt;/div&gt;
+              &lt;div class="col-11"&gt;
+                &lt;label for="hinder-1"&gt;Information about my area of study&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class="col-1"&gt;
+                &lt;input type="checkbox" id="hinder-2" name="hinders" value="Paying for college"&gt;
+              &lt;/div&gt;
+              &lt;div class="col-11"&gt;
+                &lt;label for="hinder-2"&gt;Paying for my investment in college&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class="col-1"&gt;
+                &lt;input type="checkbox" id="hinder-3" name="hinders" value="Campus life and activities"&gt;
+              &lt;/div&gt;
+              &lt;div class="col-11"&gt;
+                &lt;label for="hinder-3"&gt;Campus life and activities&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class="col-1"&gt;
+                &lt;input type="checkbox" id="hinder-4" name="hinders" value="Schedule visit"&gt;
+              &lt;/div&gt;
+              &lt;div class="col-11"&gt;
+                &lt;label for="hinder-4"&gt;Scheduling a campus visit&lt;/label&gt;
+              &lt;/div&gt;
+              &lt;div class="col-1"&gt;
+                &lt;input type="checkbox" id="hinder-5" name="hinders" value="Connect with a coach"&gt;
+              &lt;/div&gt;
+              &lt;div class="col-11"&gt;
+                &lt;label for="hinder-5"&gt;Connecting with a coach&lt;/label&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div id="form-group-4"&gt;
+            &lt;label id="label-4" class="da-container"&gt;I have decided not to attend Xavier University of Louisiana. I plan to attend:
+              &lt;input type="checkbox"&gt;
+              &lt;span class="checkmark"&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;input class="form-control" type="text" name="other_college" id="other-college" placeholder="Insert college name" name="other" data-toggle="popover" data-trigger="manual" title="Required Field" data-placement="bottom" data-content="Please tell us what college you plan to attend."&gt;
+          &lt;/div&gt;
+
+          &lt;div class="submit-btn"&gt;
+            &lt;button type="submit" class="btn btn-lg btn-warning"&gt;Submit&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+
+  &lt;script src="https://s3.amazonaws.com/xavier.ef/intentions/js/vendor/modernizr-3.6.0.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</HtmlContent>
+            </Properties>
+            <Form>
+              <Input Type="CheckBox" Name="deposit_sent" IsEncrypted="False">
+                <Options>
+                  <Option Score="0" Goal="0" IsDistinct="False">True</Option>
+                </Options>
+                <IsRequired>False</IsRequired>
+              </Input>
+              <Input Type="CheckBox" Name="still_considering" IsEncrypted="False">
+                <Options>
+                  <Option Score="0" Goal="0" IsDistinct="False">True</Option>
+                </Options>
+                <IsRequired>False</IsRequired>
+              </Input>
+              <Input Type="CheckBox" Name="hinders" IsEncrypted="False">
+                <Options>
+                  <Option Score="0" Goal="0" IsDistinct="False">Info about area of study</Option>
+                  <Option Score="0" Goal="0" IsDistinct="False">Paying for college</Option>
+                  <Option Score="0" Goal="0" IsDistinct="False">Campus life and activities</Option>
+                  <Option Score="0" Goal="0" IsDistinct="False">Schedule visit</Option>
+                  <Option Score="0" Goal="0" IsDistinct="False">Connect with a coach</Option>
+                </Options>
+                <IsRequired>False</IsRequired>
+              </Input>
+              <Input Type="TextBox" Name="will_mail_by" IsEncrypted="False">
+                <IsRequired>False</IsRequired>
+                <ValidationRegex />
+                <ValidationRegexMessage />
+              </Input>
+              <Input Type="TextBox" Name="other_college" IsEncrypted="False">
+                <IsRequired>False</IsRequired>
+                <ValidationRegex />
+                <ValidationRegexMessage />
+              </Input>
+            </Form>
+            <Flow>
+              <FlowNextElement Id="5" Name="thanks.html">
+                <Filter CriteriaJoinOperator="&amp;" />
+              </FlowNextElement>
+            </Flow>
+            <Events />
+          </ChildElement>
+          <ChildElement Id="4" DbId="0" Type="Page" IsVersion="False" Name="honeypot.html" Position="200,20">
+            <Properties PageType="Page" IsHomePage="False" SkipPage="False" IsLoginRequired="False">
+              <HtmlContent />
+            </Properties>
+            <Flow />
+            <Events />
+          </ChildElement>
+          <ChildElement Id="5" DbId="0" Type="Page" IsVersion="False" Name="thanks.html" Position="70,430">
+            <Properties PageType="Page" IsHomePage="False" SkipPage="False" IsLoginRequired="False">
+              <HtmlContent>&lt;!doctype html&gt;
+&lt;html class="no-js" lang=""&gt;
+
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;&lt;/title&gt;
+  &lt;meta name="description" content=""&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+
+  &lt;link rel="manifest" href="https://s3.amazonaws.com/xavier.ef/intentions/site.webmanifest"&gt;
+  &lt;link rel="apple-touch-icon" href="https://s3.amazonaws.com/xavier.ef/intentions/icon.png"&gt;
+  &lt;!-- Place favicon.ico in the root directory --&gt;
+  &lt;link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"&gt;
+
+  &lt;link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"&gt;
+  &lt;link rel="stylesheet" href="https://s3.amazonaws.com/xavier.ef/intentions/css/normalize.css"&gt;
+  &lt;link rel="stylesheet" href="https://s3.amazonaws.com/xavier.ef/intentions/css/main.css"&gt;
+  &lt;link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"&gt;
+
+  &lt;meta name="theme-color" content="#fafafa"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;!--[if lte IE 9]&gt;
+    &lt;p class="browserupgrade"&gt;You are using an &lt;strong&gt;outdated&lt;/strong&gt; browser. Please &lt;a href="https://browsehappy.com/"&gt;upgrade your browser&lt;/a&gt; to improve your experience and security.&lt;/p&gt;
+  &lt;![endif]--&gt;
+
+  &lt;div class="container-fluid pg-2"&gt;
+    &lt;div class="row"&gt;
+      &lt;div class="top-border"&gt;&lt;/div&gt;
+
+      &lt;div class="col-xs-0 col-md-4"&gt;&lt;/div&gt;
+
+      &lt;div class="col-xs-12 col-md-8" style="background-color:#fff;"&gt;
+        &lt;div class="banner"&gt;
+          &lt;img width="260" height="260" src="http://s3.amazonaws.com/xavier.ef/assets/images/xavier-seal.svg"&gt;
+        &lt;/div&gt;
+
+        &lt;p style="font-weight:bold;"&gt;Thanks so much, ##firstname##.&lt;br&gt;If you selected one of the first two boxes, you can take a breath. You're finally THERE!&lt;br&gt;&lt;br&gt;It has been a pleasure working with you this year,&lt;br&gt;
+        &lt;img src="https://s3.amazonaws.com/xavier.ef/assets/images/JBrown_sig.jpg"&gt;&lt;br&gt;
+        Jazmane N. Brown&lt;br&gt;
+        Assistant Vice President for Enrollment Management&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+
+  &lt;script src="https://s3.amazonaws.com/xavier.ef/intentions/js/vendor/modernizr-3.6.0.min.js"&gt;&lt;/script&gt;
+  &lt;script src="https://code.jquery.com/jquery-1.12.4.js"&gt;&lt;/script&gt;
+  &lt;script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"&gt;&lt;/script&gt;
+  &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"&gt;&lt;/script&gt;
+  &lt;script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</HtmlContent>
+            </Properties>
+            <Flow />
+            <Events />
+          </ChildElement>
+          <ChildElement Id="6" DbId="0" Type="Page" IsVersion="False" Name="redirect.html" Position="70,150">
+            <Properties PageType="Page" IsHomePage="False" SkipPage="False" IsLoginRequired="False">
+              <HtmlContent>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+   var q = location.search.replace( /&amp;*cookie.+|&amp;*session.+/gi, "" );
+   var target = location.search.match( /l=deposit|l=survey/gi );
+
+   if( target[0] == "l=deposit" ) {
+      location = "http://deposit-xula.m.mdl.io/##PURL##/deposit.html" + q;
+   }
+   else {
+      location = "http://deposit-xula.m.mdl.io/##PURL##/survey.html" + q;
+   }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;</HtmlContent>
+            </Properties>
+            <Flow />
+            <Events />
+          </ChildElement>
+        </ChildElements>
+        <ChildConnections>
+          <ChildConnection StartElementId="3" EndElementId="5" />
+          <ChildConnection StartElementId="2" EndElementId="6" />
+          <ChildConnection StartElementId="6" EndElementId="3" IsLogical="True" />
+          <ChildConnection StartElementId="6" EndElementId="1" IsLogical="True" />
+        </ChildConnections>
+        <Properties>
+          <BaseUrlCollection>
+            <BaseUrl Id="1" DbId="0" URL="deposit-xula.m.mdl.io" Extension="" Outbound_Id="0" Outbound_DbId="0" Parent_Id="0" PurlPosition="Prefix" Domain="deposit-xula.m.mdl.io" SSL="False" SearchEngineAllowed="False" />
+          </BaseUrlCollection>
+          <Settings SessionTimeout="60">
+            <InvalidPurl>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Did you type your PURL correctly?&lt;/title&gt;
+
+&lt;!-- This message can display HTML, or can automatically redirect to any absolute URL, using javascript:
+
+&lt;script type="text/javascript"&gt;
+window.location = "http://www.microsite-domain.com/your-page.html"
+&lt;/script&gt;
+
+... or a meta refresh:
+
+    &lt;meta http-equiv="refresh" content="0;URL='http://www.microsite-domain.com/your-page.html'"/&gt;    
+
+Either method should be within your &lt;head&gt; tags.  
+
+--&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- Please note that since the Contact is requesting an invalid PURL, you cannot use any variables (like ##firstname##) within your content.  --&gt;
+Are you sure you typed your Personalized URL correctly? Please try again.
+&lt;/body&gt;
+&lt;/html&gt;
+</InvalidPurl>
+            <PageNotFound>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Page not found!&lt;/title&gt;
+
+&lt;!-- This message can display HTML, or can automatically redirect to any absolute URL, using javascript:
+
+&lt;script type="text/javascript"&gt;
+window.location = "http://www.microsite-domain.com/your-page.html"
+&lt;/script&gt;
+
+... or a meta refresh:
+
+    &lt;meta http-equiv="refresh" content="0;URL='http://www.microsite-domain.com/your-page.html'"/&gt;    
+
+Either method should be within your &lt;head&gt; tags.  
+
+--&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- Please note that since the Contact is requesting a valid PURL but non-existent page, you can use any variable (like ##firstname##) within your content.  --&gt;
+Oops! ##firstname default="Sir/Madam"##,  we are really sorry but the page you requested could not be found. Please check the URL and try again.
+&lt;/body&gt;
+&lt;/html&gt;
+</PageNotFound>
+            <Error>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Something happened.&lt;/title&gt;
+
+&lt;!-- This message can display HTML, or can automatically redirect to any absolute URL, using javascript:
+
+&lt;script type="text/javascript"&gt;
+window.location = "http://www.microsite-domain.com/your-page.html"
+&lt;/script&gt;
+
+... or a meta refresh:
+
+    &lt;meta http-equiv="refresh" content="0;URL='http://www.microsite-domain.com/your-page.html'"/&gt;    
+
+Either method should be within your &lt;head&gt; tags.  
+
+--&gt;
+
+&lt;/head&gt;
+&lt;body&gt;
+&lt;!-- In addition to supporting any contact variable, this page also supports a special variable: ##error##, which is a system-generated description of the error.--&gt;
+Oops! I'm sorry ##firstname default="Sir/Madam"##, something went wrong! Please contact the site administrator. The following error has occurred: ##error##
+&lt;/body&gt;
+&lt;/html&gt;
+</Error>
+          </Settings>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="3" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="ray" Position="120,20" SharedCheckout="False" Permissions="">
+        <Filter CriteriaJoinOperator="&amp;">
+          <Criteria Row="1" Field="lastname" Operator="Equal" Value="finton" />
+        </Filter>
+        <HookedEvents TriggerFireContext="Current Visit" />
+      </CampaignElement>
+      <CampaignElement Id="4" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Email 2" Position="260,160" SharedCheckout="False" Permissions="">
+        <Events>
+          <Event EventId="20103" GoalId="1" IsDistinct="True" />
+          <Event EventId="20104" GoalId="2" IsDistinct="True" />
+        </Events>
+        <Properties>
+          <Messages>
+            <Message Id="1">
+              <ToAddress>##email##</ToAddress>
+              <FromName>Jazmane N. Brown</FromName>
+              <FromAddress>jbrown77@xula.edu</FromAddress>
+              <ReplyTo>admissions@xula.edu</ReplyTo>
+              <Subject>Clean up your inbox! ##emailsubjectlineaddendum##</Subject>
+              <HtmlContent>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"&gt;
+&lt;head&gt;
+
+&lt;meta charset="utf-8"&gt; &lt;!-- utf-8 works for most cases --&gt;
+&lt;meta name="viewport" content="width=device-width"&gt; &lt;!-- Forcing initial-scale shouldn't be necessary --&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt; &lt;!-- Use the latest (edge) version of IE rendering engine --&gt;
+&lt;meta name="x-apple-disable-message-reformatting"&gt;  &lt;!-- Disable auto-scale in iOS 10 Mail entirely --&gt;
+&lt;title&gt;&lt;/title&gt; &lt;!-- The title tag shows in email notifications, like Android 4.4. --&gt;
+
+&lt;!-- Web Font / @font-face : BEGIN --&gt;
+&lt;!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. --&gt;
+
+&lt;!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. --&gt;
+&lt;!--[if mso]&gt;
+&lt;style&gt;
+  * { font-family: Helvetica, sans-serif !important; }
+&lt;/style&gt;
+&lt;![endif]--&gt;
+
+&lt;!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ --&gt;
+
+&lt;!--[if !mso]&gt;&lt;!--&gt;
+&lt;!-- insert web font reference, eg: &lt;link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'&gt; --&gt;
+&lt;!--&lt;![endif]--&gt;
+
+&lt;!-- Web Font / @font-face : END --&gt;
+
+&lt;!-- CSS Reset : BEGIN --&gt;
+&lt;style&gt;
+  /* What it does: Remove spaces around the email design added by some email clients. */
+  /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+  html,
+  body {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  /* What it does: Stops email clients resizing small text. */
+  * {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* What it does: Centers email on Android 4.4 */
+  div[style*="margin: 16px 0"] {
+    margin: 0 !important;
+  }
+
+  /* What it does: Stops Outlook from adding extra spacing to tables. */
+  table,
+  td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+  }
+
+  /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+  table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    margin: 0 auto !important;
+  }
+  table table table {
+    table-layout: auto;
+  }
+
+  /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+  a {
+    text-decoration: none;
+  }
+
+  /* What it does: Uses a better rendering method when resizing images in IE. */
+  img {
+    -ms-interpolation-mode:bicubic;
+  }
+
+  /* What it does: A work-around for email clients meddling in triggered links. */
+  *[x-apple-data-detectors],  /* iOS */
+  .unstyle-auto-detected-links *,
+  .aBn {
+    border-bottom: 0 !important;
+    cursor: default !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+  }
+
+  /* What it does: Prevents Gmail from changing the text color in conversation threads. */
+  .im {
+    color: inherit !important;
+  }
+
+  /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+  .a6S {
+    display: none !important;
+    opacity: 0.01 !important;
+  }
+  
+  /* If the above doesn't work, add a .g-img class to any image in question. */
+  img.g-img + div {
+      display: none !important;
+  }
+
+  /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+  /* Create one of these media queries for each additional viewport size you'd like to fix */
+
+  /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+  @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+    u ~ div .email-container {
+      min-width: 320px !important;
+    }
+  }
+
+  /* iPhone 6, 6S, 7, 8, and X */
+  @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    u ~ div .email-container {
+      min-width: 375px !important;
+    }
+  }
+
+  /* iPhone 6+, 7+, and 8+ */
+  @media only screen and (min-device-width: 414px) {
+    u ~ div .email-container {
+      min-width: 414px !important;
+    }
+  }
+&lt;/style&gt;
+&lt;!-- CSS Reset : END --&gt;
+&lt;!-- Reset list spacing because Outlook ignores much of our inline CSS. --&gt;
+&lt;!--[if mso]&gt;
+&lt;style type="text/css"&gt;
+  ul,
+  ol {
+    margin: 0 !important;
+  }
+  li {
+    margin-left: 30px !important;
+  }
+  li.list-item-first {
+    margin-top: 0 !important;
+  }
+  li.list-item-last {
+    margin-bottom: 10px !important;
+  }
+&lt;/style&gt;
+&lt;![endif]--&gt;
+
+&lt;!-- Progressive Enhancements : BEGIN --&gt;
+&lt;style&gt;
+  /* What it does: Hover styles for buttons */
+  .button-td,
+  .button-a {
+    transition: all 100ms ease-in;
+  }
+
+  .button-td-primary:hover,
+  .button-a-primary:hover {
+    background: #555555 !important;
+    border-color: #555555 !important;
+  }
+
+  /* Media Queries */
+  @media screen and (max-width: 600px) {
+    .email-container {
+      width: 100% !important;
+      margin: auto !important;
+    }
+
+    /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+    .fluid {
+      max-width: 100% !important;
+      height: auto !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* What it does: Forces table cells into full-width rows. */
+    .stack-column,
+    .stack-column-center {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      direction: ltr !important;
+    }
+    
+    /* And center justify these ones. */
+    .stack-column-center {
+      text-align: center !important;
+    }
+
+    /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+    .center-on-narrow {
+      text-align: center !important;
+      display: block !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      float: none !important;
+    }
+
+    table.center-on-narrow {
+      display: inline-block !important;
+    }
+
+    /* What it does: Adjust typography on small screens to improve readability */
+    .email-container p {
+      font-size: 17px !important;
+    }
+  }
+&lt;/style&gt;
+&lt;!-- Progressive Enhancements : END --&gt;
+
+&lt;!-- What it does: Makes background images in 72ppi Outlook render at correct size. --&gt;
+&lt;!--[if gte mso 9]&gt;
+&lt;xml&gt;
+  &lt;o:OfficeDocumentSettings&gt;
+    &lt;o:AllowPNG/&gt;
+    &lt;o:PixelsPerInch&gt;96&lt;/o:PixelsPerInch&gt;
+  &lt;/o:OfficeDocumentSettings&gt;
+&lt;/xml&gt;
+&lt;![endif]--&gt;
+
+&lt;/head&gt;
+&lt;!--
+	The email background color (#222222) is defined in three places:
+	1. body tag: for most email clients
+	2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+	3. mso conditional: For Windows 10 Mail
+--&gt;
+&lt;body style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly;"&gt;
+  &lt;!-- Visually Hidden Preheader Text : BEGIN --&gt;
+  &lt;div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;"&gt;
+    We're excited to welcome you to Xavier University of Louisiana!
+  &lt;/div&gt;
+  &lt;!-- Visually Hidden Preheader Text : END --&gt;
+
+  &lt;!-- Honeypot : BEGIN --&gt;
+  &lt;a href="http://##PURL##.deposit-xula.m.mdl.io/honeypot.html" style="display: none !important; color: transparent; font-size: 1px; line-height:1px; max-height: 0px; opacity: 0; overflow: hidden; mso-hide: all;" rel="nofollow"&gt;&amp;nbsp;&lt;/a&gt;
+  &lt;!-- Honeypot : END --&gt;
+
+	&lt;center style="background: #cccccc;"&gt;
+    &lt;!--[if mso | IE]&gt;
+    &lt;table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"&gt;
+      &lt;tr&gt;
+        &lt;td align="center" valign="middle" style="background: #cccccc;"&gt;
+    &lt;![endif]--&gt;
+    
+    &lt;!-- Email Body : BEGIN --&gt;
+    &lt;table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" class="email-container" style="border-top: solid 10px #cccccc;"&gt;
+
+      &lt;!-- 1 Column Text + Button : BEGIN --&gt;
+      &lt;tr&gt;
+        &lt;td style="margin: 0; padding: 0; background: #ffffff;"&gt;
+          &lt;table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0 auto; padding: 0;"&gt;
+            &lt;tr&gt;
+              &lt;td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;"&gt;
+                &lt;p style="margin: 0 0 10px;"&gt;##firstname##,&lt;br&gt;&lt;br&gt;We get it&amp;mdash;your inbox is overflowing with messages from colleges trying to convince you to enroll. And yes, we know we're one of "them!"&lt;br&gt;&lt;br&gt;We don't want to unnecessarily clutter your inbox. So, click the button below and let us know where your next steps are taking you!&lt;/p&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td style="padding: 0 20px 20px;"&gt;
+                &lt;!-- Button : BEGIN --&gt;
+                &lt;table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:auto;"&gt;
+                  &lt;tr&gt;
+                    &lt;td class="button-td button-td-primary" style="border-radius: 4px; background: #00A885;"&gt;
+                      &lt;a class="button-a button-a-primary" href="http://##PURL##.deposit-xula.m.mdl.io/?l=survey&amp;e=2" style="background: #00A885; border: 1px solid #00A885; font-family: sans-serif; font-size: 15px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 4px;"&gt;MY NEXT STEP IS&lt;/a&gt;
+                    &lt;/td&gt;
+                  &lt;/tr&gt;
+                &lt;/table&gt;
+                &lt;!-- Button : END --&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/table&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;!-- 1 Column Text + Button : END --&gt;
+
+	    &lt;!-- 1 Column Text : BEGIN --&gt;
+	    &lt;tr&gt;
+	      &lt;td style="background-color: #ffffff;"&gt;
+	        &lt;table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"&gt;
+	          &lt;tr&gt;
+              &lt;td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;"&gt;
+                &lt;p style="margin: 0 0 10px;"&gt;
+                Sincerely,&lt;br&gt;
+                Jazmane N. Brown&lt;br&gt;
+                Assistant Vice President for Enrollment Management&lt;/p&gt;
+	            &lt;/td&gt;
+	          &lt;/tr&gt;
+	        &lt;/table&gt;
+	      &lt;/td&gt;
+	    &lt;/tr&gt;
+	    &lt;!-- 1 Column Text : END --&gt;
+	  &lt;/table&gt;
+	  &lt;!-- Email Body : END --&gt;
+
+    &lt;!-- Email Footer : BEGIN --&gt;
+    &lt;table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="border-bottom: solid 10px #cccccc;margin: 0 auto; background:#ffc530;" class="email-container"&gt;
+      &lt;tr&gt;
+        &lt;td style="padding: 20px; font-family: sans-serif; font-size: 12px; line-height: 15px; text-align: center; color: #222222;"&gt;
+          Xavier University of Louisiana&lt;br&gt;
+          &lt;span class="unstyle-auto-detected-links"&gt;1 Drexel Drive, New Orleans, LA&lt;br&gt;(504) 520-7388&lt;/span&gt;
+          &lt;br&gt;&lt;br&gt;
+          This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please &lt;a href="##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##" style="color: #888888; text-decoration: underline;"&gt;unsubscribe&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+    
+    &lt;!-- Email Footer : END --&gt;
+
+    &lt;!--[if mso | IE]&gt;
+    &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;![endif]--&gt;
+  &lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;</HtmlContent>
+              <TextContent>##firstname##,
+
+We get it—your inbox is overflowing with messages from colleges trying to convince you to enroll. And yes, we know we're one of "them!"
+
+We don't want to unnecessarily clutter your inbox. So, click the button below and let us know where your next steps are taking you!
+ 
+MY NEXT STEP IS
+
+Sincerely,
+Jazmane N. Brown
+Assistant Vice President for Enrollment Management
+
+Xavier University of Louisiana
+1 Drexel Drive, New Orleans, LA
+(504) 520-7388 
+
+This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please unsubscribe  
+</TextContent>
+            </Message>
+          </Messages>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="5" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="Email" Category="Outbound" Name="Email 3" Position="400,160" SharedCheckout="False" Permissions="">
+        <Events>
+          <Event EventId="20103" GoalId="1" IsDistinct="True" />
+          <Event EventId="20104" GoalId="2" IsDistinct="True" />
+        </Events>
+        <Properties>
+          <Messages>
+            <Message Id="1">
+              <ToAddress>##email##</ToAddress>
+              <FromName>Jazmane N. Brown</FromName>
+              <FromAddress>jbrown77@xula.edu</FromAddress>
+              <ReplyTo>admissions@xula.edu</ReplyTo>
+              <Subject>One easy step to finalizing your college decision. Learn how. ##emailsubjectlineaddendum##</Subject>
+              <HtmlContent>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office"&gt;
+&lt;head&gt;
+
+&lt;meta charset="utf-8"&gt; &lt;!-- utf-8 works for most cases --&gt;
+&lt;meta name="viewport" content="width=device-width"&gt; &lt;!-- Forcing initial-scale shouldn't be necessary --&gt;
+&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt; &lt;!-- Use the latest (edge) version of IE rendering engine --&gt;
+&lt;meta name="x-apple-disable-message-reformatting"&gt;  &lt;!-- Disable auto-scale in iOS 10 Mail entirely --&gt;
+&lt;title&gt;&lt;/title&gt; &lt;!-- The title tag shows in email notifications, like Android 4.4. --&gt;
+
+&lt;!-- Web Font / @font-face : BEGIN --&gt;
+&lt;!-- NOTE: If web fonts are not required, lines 10 - 27 can be safely removed. --&gt;
+
+&lt;!-- Desktop Outlook chokes on web font references and defaults to Times New Roman, so we force a safe fallback font. --&gt;
+&lt;!--[if mso]&gt;
+&lt;style&gt;
+  * { font-family: Helvetica, sans-serif !important; }
+&lt;/style&gt;
+&lt;![endif]--&gt;
+
+&lt;!-- All other clients get the webfont reference; some will render the font and others will silently fail to the fallbacks. More on that here: http://stylecampaign.com/blog/2015/02/webfont-support-in-email/ --&gt;
+
+&lt;!--[if !mso]&gt;&lt;!--&gt;
+&lt;!-- insert web font reference, eg: &lt;link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'&gt; --&gt;
+&lt;!--&lt;![endif]--&gt;
+
+&lt;!-- Web Font / @font-face : END --&gt;
+
+&lt;!-- CSS Reset : BEGIN --&gt;
+&lt;style&gt;
+  /* What it does: Remove spaces around the email design added by some email clients. */
+  /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+  html,
+  body {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  /* What it does: Stops email clients resizing small text. */
+  * {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* What it does: Centers email on Android 4.4 */
+  div[style*="margin: 16px 0"] {
+    margin: 0 !important;
+  }
+
+  /* What it does: Stops Outlook from adding extra spacing to tables. */
+  table,
+  td {
+    mso-table-lspace: 0pt !important;
+    mso-table-rspace: 0pt !important;
+  }
+
+  /* What it does: Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+  table {
+    border-spacing: 0 !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;
+    margin: 0 auto !important;
+  }
+  table table table {
+    table-layout: auto;
+  }
+
+  /* What it does: Prevents Windows 10 Mail from underlining links despite inline CSS. Styles for underlined links should be inline. */
+  a {
+    text-decoration: none;
+  }
+
+  /* What it does: Uses a better rendering method when resizing images in IE. */
+  img {
+    -ms-interpolation-mode:bicubic;
+  }
+
+  /* What it does: A work-around for email clients meddling in triggered links. */
+  *[x-apple-data-detectors],  /* iOS */
+  .unstyle-auto-detected-links *,
+  .aBn {
+    border-bottom: 0 !important;
+    cursor: default !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+  }
+
+  /* What it does: Prevents Gmail from changing the text color in conversation threads. */
+  .im {
+    color: inherit !important;
+  }
+
+  /* What it does: Prevents Gmail from displaying a download button on large, non-linked images. */
+  .a6S {
+    display: none !important;
+    opacity: 0.01 !important;
+  }
+  
+  /* If the above doesn't work, add a .g-img class to any image in question. */
+  img.g-img + div {
+      display: none !important;
+  }
+
+  /* What it does: Removes right gutter in Gmail iOS app: https://github.com/TedGoas/Cerberus/issues/89  */
+  /* Create one of these media queries for each additional viewport size you'd like to fix */
+
+  /* iPhone 4, 4S, 5, 5S, 5C, and 5SE */
+  @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+    u ~ div .email-container {
+      min-width: 320px !important;
+    }
+  }
+
+  /* iPhone 6, 6S, 7, 8, and X */
+  @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    u ~ div .email-container {
+      min-width: 375px !important;
+    }
+  }
+
+  /* iPhone 6+, 7+, and 8+ */
+  @media only screen and (min-device-width: 414px) {
+    u ~ div .email-container {
+      min-width: 414px !important;
+    }
+  }
+&lt;/style&gt;
+&lt;!-- CSS Reset : END --&gt;
+&lt;!-- Reset list spacing because Outlook ignores much of our inline CSS. --&gt;
+&lt;!--[if mso]&gt;
+&lt;style type="text/css"&gt;
+  ul,
+  ol {
+    margin: 0 !important;
+  }
+  li {
+    margin-left: 30px !important;
+  }
+  li.list-item-first {
+    margin-top: 0 !important;
+  }
+  li.list-item-last {
+    margin-bottom: 10px !important;
+  }
+&lt;/style&gt;
+&lt;![endif]--&gt;
+
+&lt;!-- Progressive Enhancements : BEGIN --&gt;
+&lt;style&gt;
+  /* What it does: Hover styles for buttons */
+  .button-td,
+  .button-a {
+    transition: all 100ms ease-in;
+  }
+
+  .button-td-primary:hover,
+  .button-a-primary:hover {
+    background: #555555 !important;
+    border-color: #555555 !important;
+  }
+
+  /* Media Queries */
+  @media screen and (max-width: 600px) {
+    .email-container {
+      width: 100% !important;
+      margin: auto !important;
+    }
+
+    /* What it does: Forces elements to resize to the full width of their container. Useful for resizing images beyond their max-width. */
+    .fluid {
+      max-width: 100% !important;
+      height: auto !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    /* What it does: Forces table cells into full-width rows. */
+    .stack-column,
+    .stack-column-center {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      direction: ltr !important;
+    }
+    
+    /* And center justify these ones. */
+    .stack-column-center {
+      text-align: center !important;
+    }
+
+    /* What it does: Generic utility class for centering. Useful for images, buttons, and nested tables. */
+    .center-on-narrow {
+      text-align: center !important;
+      display: block !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      float: none !important;
+    }
+
+    table.center-on-narrow {
+      display: inline-block !important;
+    }
+
+    /* What it does: Adjust typography on small screens to improve readability */
+    .email-container p {
+      font-size: 17px !important;
+    }
+  }
+&lt;/style&gt;
+&lt;!-- Progressive Enhancements : END --&gt;
+
+&lt;!-- What it does: Makes background images in 72ppi Outlook render at correct size. --&gt;
+&lt;!--[if gte mso 9]&gt;
+&lt;xml&gt;
+  &lt;o:OfficeDocumentSettings&gt;
+    &lt;o:AllowPNG/&gt;
+    &lt;o:PixelsPerInch&gt;96&lt;/o:PixelsPerInch&gt;
+  &lt;/o:OfficeDocumentSettings&gt;
+&lt;/xml&gt;
+&lt;![endif]--&gt;
+
+&lt;/head&gt;
+&lt;!--
+	The email background color (#222222) is defined in three places:
+	1. body tag: for most email clients
+	2. center tag: for Gmail and Inbox mobile apps and web versions of Gmail, GSuite, Inbox, Yahoo, AOL, Libero, Comcast, freenet, Mail.ru, Orange.fr
+	3. mso conditional: For Windows 10 Mail
+--&gt;
+&lt;body style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly;"&gt;
+  &lt;!-- Visually Hidden Preheader Text : BEGIN --&gt;
+  &lt;div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;"&gt;
+    We're excited to welcome you to Xavier University of Louisiana!
+  &lt;/div&gt;
+  &lt;!-- Visually Hidden Preheader Text : END --&gt;
+
+  &lt;!-- Honeypot : BEGIN --&gt;
+  &lt;a href="http://##PURL##.deposit-xula.m.mdl.io/honeypot.html" style="display: none !important; color: transparent; font-size: 1px; line-height:1px; max-height: 0px; opacity: 0; overflow: hidden; mso-hide: all;" rel="nofollow"&gt;&amp;nbsp;&lt;/a&gt;
+  &lt;!-- Honeypot : END --&gt;
+
+	&lt;center style="background: #cccccc;"&gt;
+    &lt;!--[if mso | IE]&gt;
+    &lt;table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%"&gt;
+      &lt;tr&gt;
+        &lt;td align="center" valign="middle" style="background: #cccccc;"&gt;
+    &lt;![endif]--&gt;
+    
+    &lt;!-- Email Body : BEGIN --&gt;
+    &lt;table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" class="email-container" style="border-top: solid 10px #cccccc;"&gt;
+
+      &lt;!-- 1 Column Text + Button : BEGIN --&gt;
+      &lt;tr&gt;
+        &lt;td style="margin: 0; padding: 0; background: #ffffff;"&gt;
+          &lt;table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 0 auto; padding: 0;"&gt;
+            &lt;tr&gt;
+              &lt;td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;"&gt;
+                &lt;p style="margin: 0 0 10px;"&gt;Hey ##firstname##,&lt;br&gt;&lt;br&gt;It's that time of year. Everyone is clamoring to get your enrollment deposit, and it's a pretty stressful time. We get it. So, let us know your plans. Coming to XULA, going somewhere else, or still deciding? By clicking &lt;a href="http://##PURL##.deposit-xula.m.mdl.io/?l=survey&amp;e=3"&gt;here&lt;/a&gt;, you can answer that question in ten seconds!&lt;/p&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td style="padding: 0 20px 20px;"&gt;
+                &lt;!-- Button : BEGIN --&gt;
+                &lt;table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:auto;"&gt;
+                  &lt;tr&gt;
+                    &lt;td class="button-td button-td-primary" style="border-radius: 4px; background: #00A885;"&gt;
+                      &lt;a class="button-a button-a-primary" href="http://##PURL##.deposit-xula.m.mdl.io/?l=survey&amp;e=3" style="background: #00A885; border: 1px solid #00A885; font-family: sans-serif; font-size: 15px; line-height: 15px; text-decoration: none; padding: 13px 17px; color: #ffffff; display: block; border-radius: 4px;"&gt;TELL US IN 10 SECONDS&lt;/a&gt;
+                    &lt;/td&gt;
+                  &lt;/tr&gt;
+                &lt;/table&gt;
+                &lt;!-- Button : END --&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/table&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;!-- 1 Column Text + Button : END --&gt;
+
+	    &lt;!-- 1 Column Text : BEGIN --&gt;
+	    &lt;tr&gt;
+	      &lt;td style="background-color: #ffffff;"&gt;
+	        &lt;table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"&gt;
+	          &lt;tr&gt;
+              &lt;td style="padding: 20px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;"&gt;
+                &lt;p style="margin: 0 0 10px;"&gt;
+                Sincerely,&lt;br&gt;
+                Jazmane N. Brown&lt;br&gt;
+                Assistant Vice President for Enrollment Management&lt;/p&gt;
+	            &lt;/td&gt;
+	          &lt;/tr&gt;
+	        &lt;/table&gt;
+	      &lt;/td&gt;
+	    &lt;/tr&gt;
+	    &lt;!-- 1 Column Text : END --&gt;
+	  &lt;/table&gt;
+	  &lt;!-- Email Body : END --&gt;
+
+    &lt;!-- Email Footer : BEGIN --&gt;
+    &lt;table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="border-bottom: solid 10px #cccccc;margin: 0 auto; background:#ffc530;" class="email-container"&gt;
+      &lt;tr&gt;
+        &lt;td style="padding: 20px; font-family: sans-serif; font-size: 12px; line-height: 15px; text-align: center; color: #222222;"&gt;
+          Xavier University of Louisiana&lt;br&gt;
+          &lt;span class="unstyle-auto-detected-links"&gt;1 Drexel Drive, New Orleans, LA&lt;br&gt;(504) 520-7388&lt;/span&gt;
+          &lt;br&gt;&lt;br&gt;
+          This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please &lt;a href="##Unsubscribe RedirectURL="https://s3-us-west-1.amazonaws.com/rsrc.enrollmentfuel.com/unsubscribed.htm" ##" style="color: #888888; text-decoration: underline;"&gt;unsubscribe&lt;/a&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/table&gt;
+    
+    &lt;!-- Email Footer : END --&gt;
+
+    &lt;!--[if mso | IE]&gt;
+    &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;![endif]--&gt;
+  &lt;/center&gt;
+&lt;/body&gt;
+&lt;/html&gt;</HtmlContent>
+              <TextContent>Hey ##firstname##,
+
+It's that time of year. Everyone is clamoring to get your enrollment deposit, and it's a pretty stressful time. We get it. So, let us know your plans. Coming to XULA, going somewhere else, or still deciding? By clicking here, you can answer that question in ten seconds!
+ 
+TELL US IN 10 SECONDS
+
+Sincerely,
+Jazmane N. Brown
+Assistant Vice President for Enrollment Management
+
+Xavier University of Louisiana
+1 Drexel Drive, New Orleans, LA
+(504) 520-7388 
+
+This message is being sent to ##firstname## ##lastname## at ##email##. If you are not ##firstname## ##lastname## or no longer wish to receive messages of this nature, please unsubscribe  </TextContent>
+            </Message>
+          </Messages>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="6" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="ef seeds" Position="260,20" SharedCheckout="False" Permissions="">
+        <Filter CriteriaJoinOperator="&amp;">
+          <Criteria Row="1" Field="seedlevel" Operator="Equal" Value="2" />
+        </Filter>
+        <HookedEvents TriggerFireContext="Current Visit" />
+      </CampaignElement>
+      <CampaignElement Id="7" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="client seeds" Position="400,20" SharedCheckout="False" Permissions="">
+        <Filter CriteriaJoinOperator="&amp;">
+          <Criteria Row="1" Field="seedlevel" Operator="Equal" Value="3" />
+        </Filter>
+        <HookedEvents TriggerFireContext="Current Visit" />
+      </CampaignElement>
+      <CampaignElement Id="8" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="students" Position="540,20" SharedCheckout="False" Permissions="">
+        <Filter CriteriaJoinOperator="&amp;">
+          <Criteria Row="1" Field="isseed" Operator="NotEqual" Value="True" />
+          <Criteria Row="2" Field="suppress_email" Operator="NotEqual" Value="True" />
+          <AdvancedFilter CriteriaJoinOperator="&amp;">
+            <AdvancedCriteria Criteria="Performed an Event" AllContacts="False" CriteriaId="2" From="3/16/19" To="5/16/19" ProgramId="-1" InboundContext="All Visits" CampaignId="-1" InboundId="-2" InboundDetailId="-3" CriteriaOption="30502" Operator="Equal" Value="0" />
+          </AdvancedFilter>
+        </Filter>
+        <HookedEvents TriggerFireContext="Current Visit" />
+      </CampaignElement>
+      <CampaignElement Id="9" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="ContactList" Position="780,70" SharedCheckout="False" Permissions="">
+        <Filter CriteriaJoinOperator="&amp;">
+          <Criteria Row="1" Field="isseed" Operator="NotEqual" Value="True" />
+          <Criteria Row="2" Field="reported" Operator="NotEqual" Value="True" />
+          <AdvancedFilter CriteriaJoinOperator="&amp;">
+            <AdvancedCriteria Criteria="Performed an Event" AllContacts="False" CriteriaId="2" From="3/16/19" To="5/16/19" ProgramId="-1" InboundContext="All Visits" CampaignId="-1" InboundId="-2" InboundDetailId="-3" CriteriaOption="30502" Operator="GreaterThan" Value="0" />
+          </AdvancedFilter>
+        </Filter>
+        <HookedEvents TriggerFireContext="Current Visit" />
+      </CampaignElement>
+      <CampaignElement Id="10" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="OutboundApplication" Category="Outbound" Name="Cloud Connect" Position="780,190" SharedCheckout="False" Permissions="">
+        <Events />
+        <Properties ServiceTypeID="2019" ApplicationVersion="1.3">
+          <Configs>
+            <Config Key="URI">http://studio.afw.mdl.io/api/OutboundApp/AppCallback?serviceTypeId=2019&amp;identifier=##identifier##&amp;accountId=##accountid##&amp;outboundId=##outboundid##&amp;outboundContactId=##OutboundContact_ID##</Config>
+            <Config Key="Headers"></Config>
+            <Config Key="AuthenticationType">None</Config>
+            <Config Key="Authentication"></Config>
+            <Config Key="Method">Post</Config>
+            <Config Key="ContentType">Json</Config>
+            <Config Key="Body"></Config>
+            <Config Key="JsBody"></Config>
+            <Config Key="ResponseHandler"></Config>
+            <Config Key="JsResponseHandler"></Config>
+            <Config Key="CallbackHandler"></Config>
+            <Config Key="JsCallbackHandler">var date = new Date();
+
+var contact = [
+   { Key: "reported", Value: "True" },
+   { Key: "eventid", Value: "201914" },
+   { Key: "eventoption", Value: "reported" },
+   { Key: "date", Value: date.toISOString() }
+];
+
+JSON.stringify( contact );</Config>
+            <Config Key="CallbackResponse"></Config>
+            <Config Key="Proxy"></Config>
+          </Configs>
+          <Fields />
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="11" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="ContactList" Position="780,310" SharedCheckout="False" Permissions="">
+        <Filter CriteriaJoinOperator="&amp;" />
+        <HookedEvents TriggerFireContext="Current Child Visit">
+          <Event EventId="201914" ElementId="10" />
+        </HookedEvents>
+      </CampaignElement>
+      <CampaignElement Id="12" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="DirectMail" Category="Outbound" Name="Direct Mail" Position="780,430" SharedCheckout="False" IsTrackingRequired="False" Permissions="">
+        <Events />
+        <Properties>
+          <Messages>
+            <Message Type="CSV" Encoding="UTF 8">
+              <SelectedColumns>
+                <Column Alias="Staff Assigned">##counselor##</Column>
+                <Column Alias="Ref">##student_id##</Column>
+                <Column Alias="PURL">##purl##</Column>
+                <Column Alias="First Name">##firstname##</Column>
+                <Column Alias="Last Name">##lastname##</Column>
+                <Column Alias="Email">##email##</Column>
+                <Column Alias="Address 1">##address1##</Column>
+                <Column Alias="Address 2">##address2##</Column>
+                <Column Alias="City">##city##</Column>
+                <Column Alias="State">##state##</Column>
+                <Column Alias="Zip">##zip##</Column>
+                <Column Alias="deposit sent">##deposit_sent##</Column>
+                <Column Alias="will mail by">##will_mail_by##</Column>
+                <Column Alias="other college">##other_college##</Column>
+                <Column Alias="still considering">##still_considering##</Column>
+                <Column Alias="hinders">##hinders##</Column>
+              </SelectedColumns>
+            </Message>
+            <EmailNotification>
+              <FromDisplayName>Foxtrot Team</FromDisplayName>
+              <ToAddress>ftp://guest:muppets@52.91.158.44/Xavier/Survey/</ToAddress>
+              <Subject>Direct Mail Export File</Subject>
+              <Body>$Link&lt;br/&gt;$Mapping</Body>
+            </EmailNotification>
+          </Messages>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="13" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="Copy_ContactList" Position="920,70" SharedCheckout="False" Permissions="">
+        <Filter CriteriaJoinOperator="&amp;">
+          <Criteria Row="1" Field="isseed" Operator="NotEqual" Value="True" />
+          <Criteria Row="2" Field="reported" Operator="Equal" Value="True" />
+        </Filter>
+        <HookedEvents TriggerFireContext="Current Visit" />
+      </CampaignElement>
+      <CampaignElement Id="14" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="DirectMail" Category="Outbound" Name="Copy_Direct Mail" Position="920,190" SharedCheckout="False" Permissions="">
+        <Events />
+        <Properties>
+          <Messages>
+            <Message Type="CSV" Encoding="UTF 8">
+              <SelectedColumns>
+                <Column Alias="Staff Assigned">##counselor##</Column>
+                <Column Alias="Ref">##student_id##</Column>
+                <Column Alias="PURL">##purl##</Column>
+                <Column Alias="First Name">##firstname##</Column>
+                <Column Alias="Last Name">##lastname##</Column>
+                <Column Alias="Email">##email##</Column>
+                <Column Alias="Address 1">##address1##</Column>
+                <Column Alias="Address 2">##address2##</Column>
+                <Column Alias="City">##city##</Column>
+                <Column Alias="State">##state##</Column>
+                <Column Alias="Zip">##zip##</Column>
+                <Column Alias="deposit sent">##deposit_sent##</Column>
+                <Column Alias="will mail by">##will_mail_by##</Column>
+                <Column Alias="other college">##other_college##</Column>
+                <Column Alias="still considering">##still_considering##</Column>
+                <Column Alias="hinders">##hinders##</Column>
+              </SelectedColumns>
+            </Message>
+            <EmailNotification>
+              <FromDisplayName>Foxtrot Team</FromDisplayName>
+              <ToAddress>ftp://guest:muppets@52.91.158.44/Xavier/Survey/</ToAddress>
+              <Subject>Direct Mail Export File</Subject>
+              <Body>$Link&lt;br/&gt;$Mapping</Body>
+            </EmailNotification>
+          </Messages>
+        </Properties>
+      </CampaignElement>
+      <CampaignElement Id="15" DbId="0" CheckOutId="0" Version="1.0" State="Start" Type="ContactList" Category="TargetAudience" Name="Linda/Jacqui" Position="680,20" SharedCheckout="False" Permissions="">
+        <Filter CriteriaJoinOperator="&amp;">
+          <Criteria Row="1" Field="isseed" Operator="Equal" Value="True" />
+          <Criteria Row="2" Field="lastname" Operator="RegexMatch" Value="(?i)bishop|elliott" />
+        </Filter>
+        <HookedEvents TriggerFireContext="Current Visit" />
+      </CampaignElement>
+    </CampaignElements>
+    <CampaignConnections>
+      <CampaignConnection StartElementId="1" EndElementId="2" />
+      <CampaignConnection StartElementId="3" EndElementId="1" />
+      <CampaignConnection StartElementId="3" EndElementId="4" />
+      <CampaignConnection StartElementId="4" EndElementId="2" />
+      <CampaignConnection StartElementId="3" EndElementId="5" />
+      <CampaignConnection StartElementId="5" EndElementId="2" />
+      <CampaignConnection StartElementId="6" EndElementId="1" />
+      <CampaignConnection StartElementId="6" EndElementId="4" />
+      <CampaignConnection StartElementId="6" EndElementId="5" />
+      <CampaignConnection StartElementId="7" EndElementId="1" />
+      <CampaignConnection StartElementId="7" EndElementId="4" />
+      <CampaignConnection StartElementId="7" EndElementId="5" />
+      <CampaignConnection StartElementId="8" EndElementId="1" />
+      <CampaignConnection StartElementId="8" EndElementId="4" />
+      <CampaignConnection StartElementId="8" EndElementId="5" />
+      <CampaignConnection StartElementId="9" EndElementId="10" />
+      <CampaignConnection StartElementId="10" EndElementId="11" />
+      <CampaignConnection StartElementId="11" EndElementId="12" />
+      <CampaignConnection StartElementId="13" EndElementId="14" />
+      <CampaignConnection StartElementId="15" EndElementId="1" />
+      <CampaignConnection StartElementId="15" EndElementId="4" />
+      <CampaignConnection StartElementId="15" EndElementId="5" />
+    </CampaignConnections>
+  </Campaign>
+  <RuleGroupSet />
+</Program>

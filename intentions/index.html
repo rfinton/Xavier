@@ -1,0 +1,224 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="https://s3.amazonaws.com/xavier.ef/intentions/site.webmanifest">
+  <link rel="apple-touch-icon" href="https://s3.amazonaws.com/xavier.ef/intentions/icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+  <link rel="stylesheet" href="https://s3.amazonaws.com/xavier.ef/intentions/css/normalize.css">
+  <link rel="stylesheet" href="https://s3.amazonaws.com/xavier.ef/intentions/css/main.css">
+  
+  <meta name="theme-color" content="#fafafa">
+
+  <script>
+    $(document).ready(function() {
+      $('#datepicker').datepicker(); //enable datepicker
+
+      function checkQuestion4() {
+        var q4 = $("#label-4 input[type=checkbox]").prop('checked');
+        var oc = $("#other-college").val();
+        
+        if(q4 && !oc) {
+          $('#other-college').popover('show');
+          $('#other-college').focus();
+          $('#other-college').blur(function() {
+            $('#other-college').popover('hide');
+          });
+
+          return false;
+        }
+      }
+
+      $('#xform').on('submit', function(event) {
+        if(checkQuestion4() == false) {
+          return false;
+        }
+
+        var form_ready = $('input[name=will_mail_by]').val() || $('input[name=deposit_sent]').prop('checked') || $('input[name=still_considering]').prop('checked') || $('input[name=other_college]').val();
+
+        if(!form_ready) {
+          alert("Let us know your deposit status by checking the appropriate boxes. Thanks!");
+          return false;  
+        }
+        
+        return true;
+      });
+
+      $('#label-1').click(function() {
+        $('#label-2 input[type=checkbox]').prop('checked', false);
+        $('#label-4 input[type=checkbox]').prop('checked', false);
+        $('#other-college').val('');
+
+        if($('#datepicker').val() == "") {
+          $('#datepicker').datepicker('show');
+          $('#datepicker').focus();
+        }
+        else {
+          $('#datepicker').val('');
+        }
+      });
+
+      $('#datepicker').blur(function() {
+        if($('#datepicker').val() == "") {
+          $('#label-1 input[type=checkbox]').prop('checked', false);
+        }
+      });
+
+      $('#datepicker').change(function() {
+        if($('#datepicker').val() == "") {
+          $('#label-1 input[type=checkbox]').prop('checked', false);
+        }
+        else {
+          $('#label-1 input[type=checkbox]').prop('checked', true);
+        }
+      });
+
+      $('#label-2').click(function() {
+        $('#label-1 input[type=checkbox]').prop('checked', false);
+        $('#datepicker').val('');
+        $('#label-4 input[type=checkbox]').prop('checked', false);
+        $('#other-college').val('');
+      });
+
+      $('#label-3 input[type=checkbox]').change(function() {
+        $('#label-4 input[type=checkbox]').prop('checked', false);
+      });
+
+      $('.hinders input[type=checkbox]').change(function() {
+        $('#label-4 input[type=checkbox]').prop('checked', false);
+        var c = false;
+        $.each($('input[name=hinders]'), function() {
+          if(this.checked && !c) {
+            c = true;
+          }
+        });
+        $('input[name=still_considering]').prop('checked', c);
+      });
+
+      $('#label-4').click(function() {
+        $('#label-1 input[type=checkbox]').prop('checked', false);
+        $('#datepicker').val('');
+        $('#label-2 input[type=checkbox]').prop('checked', false);
+        $('#label-3 input[type=checkbox]').prop('checked', false);
+        $('input[name=hinders]').prop('checked', false);
+        $('#other-college').focus();
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <div class="container-fluid pg-1">
+    <div class="row">
+      <div class="top-border"></div>
+
+      <div class="col-xs-0 col-md-4"></div>
+
+      <div class="col-xs-12 col-md-8" style="background-color:#ffffff;">
+        <div class="banner">
+          <img width="260" height="260" src="http://s3.amazonaws.com/xavier.ef/assets/images/xavier-seal.svg">
+        </div>
+
+        <h4>Let us know where you are in the process so we can help! Simply fill out the form below or visit <a target="_blank" href="http://confirm.xula.edu">http://confirm.xula.edu</a> to update your status.</h4>
+
+        <form method="post" id="xform">
+          <div id="form-group-1">
+            <label id="label-1" class="da-container">Woohoo&mdash;I am depositing soon. I will mail my deposit by:
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+              </div>
+              <input type="text" id="datepicker" name="will_mail_by" class="form-control" value="##will_mail_by##">
+            </div>
+          </div>
+
+          <div id="form-group-2">
+            <label id="label-2" class="da-container">My deposit is already in the mail!
+              <input type="checkbox" name="deposit_sent" value="True">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+
+          <div id="form-group-3">
+            <label id="label-3" class="da-container">I am still considering Xavier University of Louisiana.<br>But, before I send my deposit, can you help me with (select all that apply):
+              <input type="checkbox" name="still_considering" value="True">
+              <span class="checkmark"></span>
+            </label>
+            
+            <div class="hinders row">
+              <div class="col-1">
+                <input type="checkbox" id="hinder-1" name="hinders" value="Info about area of study">
+              </div>
+              <div class="col-11">
+                <label for="hinder-1">Information about my area of study</label>
+              </div>
+              <div class="col-1">
+                <input type="checkbox" id="hinder-2" name="hinders" value="Paying for college">
+              </div>
+              <div class="col-11">
+                <label for="hinder-2">Paying for my investment in college</label>
+              </div>
+              <div class="col-1">
+                <input type="checkbox" id="hinder-3" name="hinders" value="Campus life and activities">
+              </div>
+              <div class="col-11">
+                <label for="hinder-3">Campus life and activities</label>
+              </div>
+              <div class="col-1">
+                <input type="checkbox" id="hinder-4" name="hinders" value="Schedule visit">
+              </div>
+              <div class="col-11">
+                <label for="hinder-4">Scheduling a campus visit</label>
+              </div>
+              <div class="col-1">
+                <input type="checkbox" id="hinder-5" name="hinders" value="Connect with a coach">
+              </div>
+              <div class="col-11">
+                <label for="hinder-5">Connecting with a coach</label>
+              </div>
+            </div>
+          </div>
+
+          <div id="form-group-4">
+            <label id="label-4" class="da-container">I have decided not to attend Xavier University of Louisiana. I plan to attend:
+              <input type="checkbox">
+              <span class="checkmark"></span>
+            </label>
+            <input class="form-control" type="text" name="other_college" id="other-college" placeholder="Insert college name" name="other" data-toggle="popover" data-trigger="manual" title="Required Field" data-placement="bottom" data-content="Please tell us what college you plan to attend.">
+          </div>
+
+          <div class="submit-btn">
+            <button type="submit" class="btn btn-lg btn-warning">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    
+  </div>
+
+  <script src="https://s3.amazonaws.com/xavier.ef/intentions/js/vendor/modernizr-3.6.0.min.js"></script>
+</body>
+
+</html>

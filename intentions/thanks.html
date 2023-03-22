@@ -1,0 +1,63 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="https://s3.amazonaws.com/xavier.ef/intentions/site.webmanifest">
+  <link rel="apple-touch-icon" href="https://s3.amazonaws.com/xavier.ef/intentions/icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <div class="container-fluid pg-2">
+    <div class="row">
+      <div class="top-border"></div>
+
+      <div class="col-xs-0 col-md-4"></div>
+
+      <div class="col-xs-12 col-md-8" style="background-color:#fff;">
+        <div class="banner">
+          <img width="260" height="260" src="http://s3.amazonaws.com/xavier.ef/assets/images/xavier-seal.svg">
+        </div>
+
+        <p style="font-weight:bold;">Thanks so much, ##firstname##.<br>If you selected one of the first two boxes, you can take a breath. You're finally THERE!<br><br>It has been a pleasure working with you this year,<br>
+        <img src="https://s3.amazonaws.com/xavier.ef/assets/images/JBrown_sig.jpg"><br>
+        Jazamane N. Brown<br>
+        Assistant Vice President for Enrollment Management</p>
+      </div>
+    </div>
+    
+  </div>
+
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    $(function() {
+      $("#datepicker" ).datepicker();
+      $('.fa-calendar-alt, #label-1, #chkbox-1').click(function() {
+        $("#datepicker" ).datepicker('show');
+      });
+    });
+  </script>
+</body>
+
+</html>
